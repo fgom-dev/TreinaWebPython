@@ -7,6 +7,10 @@ class ListaLigada():
         self.__ultimo_no = None
         self.__tamanho = 0
 
+    @property
+    def tamanho(self):
+        return self.__tamanho
+
     def esta_vazia(self):
         return self.__tamanho == 0
 
@@ -92,5 +96,3 @@ class ListaLigada():
     def remover_elemento(self, elemento):
         indice = self.indice(elemento)
         self.remover_posicao(indice)
-
-
