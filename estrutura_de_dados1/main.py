@@ -75,5 +75,5 @@ elif menu == 6:
     conjunto_teste.inserir(2)
     conjunto_teste.inserir(3)
     print(conjunto_teste.inserir(3))
-    print(conjunto_teste.inserir_posicao(1, 3))
+    # print(conjunto_teste.inserir_posicao(1, 3))
     print(conjunto_teste)
