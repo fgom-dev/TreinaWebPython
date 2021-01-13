@@ -3,6 +3,8 @@ from listas import lista_ligada, lista_duplamente_ligada
 from pilhas import pilha
 from filas import fila
 from conjuntos import conjunto
+from mapas import mapa
+from arvores import arvore, no_arvore_inteiro
 
 
 print(30 * '-', 'MENU', 30 * '-')
@@ -12,6 +14,8 @@ print('3.Listas Duplamente Ligadas')
 print('4.Pilhas')
 print('5.Filas')
 print('6.Conjuntos')
+print('7.Mapas')
+print('8.Arvores')
 
 menu = int(input('Digite a opção desejada: '))
 
@@ -77,3 +81,32 @@ elif menu == 6:
     print(conjunto_teste.inserir(3))
     # print(conjunto_teste.inserir_posicao(1, 3))
     print(conjunto_teste)
+elif menu == 7:
+    mapa_teste = mapa.Mapa()
+    print(mapa_teste)
+    mapa_teste.adicionar('par', 10)
+    mapa_teste.adicionar('impar', 5)
+    mapa_teste.adicionar('par', 2)
+    print(mapa_teste)
+    print(mapa_teste.contem_chave('par'))
+    print(mapa_teste.recuperar('par'))
+elif menu == 8:
+    arvore_teste = arvore.Arvore()
+    print(arvore_teste)
+    arvore_teste.inserir_elemento(no_arvore_inteiro.NoArvoreInteiro(7))
+    arvore_teste.inserir_elemento(no_arvore_inteiro.NoArvoreInteiro(6))
+    arvore_teste.inserir_elemento(no_arvore_inteiro.NoArvoreInteiro(10))
+    arvore_teste.inserir_elemento(no_arvore_inteiro.NoArvoreInteiro(4))
+    arvore_teste.inserir_elemento(no_arvore_inteiro.NoArvoreInteiro(9))
+    arvore_teste.inserir_elemento(no_arvore_inteiro.NoArvoreInteiro(12))
+    arvore_teste.inserir_elemento(no_arvore_inteiro.NoArvoreInteiro(5))
+    print(arvore_teste)
+    print(arvore_teste.buscar(no_arvore_inteiro.NoArvoreInteiro(7)))
+    print('Em ordem')
+    arvore_teste.em_ordem()
+    print('Pré-ordem')
+    arvore_teste.pre_ordem()
+    print('Pós-ordem')
+    arvore_teste.pos_ordem()
+    print('Altura')
+    print(arvore_teste.altura())
